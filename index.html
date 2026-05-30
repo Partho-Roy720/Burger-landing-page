@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="./src/output.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!------- NAV-BAR -------- -->
+<header class="bg-primary top-0 left-0 w-full z-50">
+<body>
+    <nav class="relative flex items-center justify-between container mx-auto py-5 ">
+        <div class="flex items-center gap-0 text-3xl">
+            <a href="#">BUR</a>
+            <span class="text-secondary">GUR</span>
+        </div>
+
+
+
+        <div id="nav-menu" class=" hidden absolute top-0 left-0 w-full p-15 bg-primary border-b border-secondary
+        md:block  md:static md:py-0 md:border-none
+        md:w-auto md:ml-auto   ">
+            <ul class=" flex flex-col text-center gap-5 md:flex-row">
+                <li><a href="#home" class="nav-links hover:text-secondary">Home</a></li>
+                <li><a href="#about" class="nav-links hover:text-secondary">About</a></li>
+                <li><a href="#menu" class="nav-links hover:text-secondary">Menu</a></li>
+                <li><a href="#review" class="nav-links hover:text-secondary">Review</a></li>
+                <li><a href="#contact" class="nav-links hover:text-red">Contact</a></li>
+            </ul>
+            <div class="md:hidden absolute top-5 right-4 hover:text-secondary text-2xl transition duration-300">
+                <i id="nav-close" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+ 
+
+
+        <!-- moon and bar icon -->
+        <div class=" flex items-center gap-5  ">
+           <i class="fa-regular fa-moon cursor-pointer ml-4"></i>
+
+           <div id="hamburger"  class="md:hidden">
+            <i class="fa-solid fa-bars cursor-pointer"></i>
+           </div>
+        </div>
+    </nav>
+    </header>
+
+    <script src="./src/app.js"></script>
+</body>
+</html>
