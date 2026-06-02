@@ -4,6 +4,9 @@
     body{
         @apply text-white bg-primary;
     }
+    section{
+        @apply pt-16 pb-4 md:pt-20
+    }
 }
 
 
@@ -15,5 +18,24 @@
     --color-dark:#000;
     --color-darklight:#171717;
     --color-green:#007936;
-    --color-para:#0c0c0c;
+    --color-paragraph:#0c0c0c;
+}
+
+.separator{
+    @apply w-28 h-[2px] bg-secondary my-5;
+}
+
+.paragraph{
+    @apply text-shadow-white text-xs leading-5;
+}
+
+
+@theme {
+  --animate-movingY: move 2s linear infinite;
+
+  @keyframes move {
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
 }
