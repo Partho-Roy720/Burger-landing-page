@@ -39,3 +39,7 @@
     }
   }
 }
+
+
+.tabs-warp ul li:hover,
+.tabs-warp ul li.active{@apply bg-secondary text-black;}

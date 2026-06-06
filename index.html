@@ -6,6 +6,12 @@
     <title>Document</title>
      <link href="./src/output.css" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- swiper link -->
+     <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
 </head>
 
 
@@ -13,9 +19,9 @@
 <body>
 
     <!------- NAV-BAR -------- -->
-    <header class="bg-primary top-0 left-0 w-full z-50"></header>
+    <header class="bg-primary top-0 left-0 w-full z-50 "></header>
 
-    <nav class="relative flex items-center justify-between container mx-auto py-5 ">
+    <nav class="relative flex items-center justify-between container mx-auto py-5">
         <div class="flex items-center gap-0 text-3xl">
             <a href="#">BUR</a>
             <span class="text-secondary">GUR</span>
@@ -27,7 +33,7 @@
         md:block  md:static md:py-0 md:border-none
         md:w-auto md:ml-auto  z-50 ">
             <ul class=" flex flex-col text-center gap-5 md:flex-row">
-                <li><a href="#home" class="nav-links hover:text-secondary">Home</a></li>
+                <li><a href="#home" class="nav-links hover:text-secondary focus:text-secondary focus:outline-none">Home</a></li>
                 <li><a href="#about" class="nav-links hover:text-secondary">About</a></li>
                 <li><a href="#menu" class="nav-links hover:text-secondary">Menu</a></li>
                 <li><a href="#review" class="nav-links hover:text-secondary">Review</a></li>
@@ -48,7 +54,9 @@
             <i class="fa-solid fa-bars cursor-pointer"></i>
            </div>
         </div>
+        
     </nav>
+    <div class="separator w-full"></div>
     </header>
 
 
@@ -206,10 +214,10 @@
 
 <!----------- About ------------>
     <section id="about">
-        <div class="container mx-auto flex flex-col mx-4 gap-10  md:flex-row">
-            <div class="flex-1"><img src="./src/img/about.jpg" alt="About Us" class="rounded-lg" ></div>
+        <div class="container mx-auto flex flex-col  gap-10  md:flex-row">
+            <div class="flex-1 mx-2"><img src="./src/img/about.jpg" alt="About Us" class="rounded-lg" ></div>
 
-            <div class="flex-1">
+            <div class="flex-1 mx-2">
                 <h1 class="text-3xl font-bold ">FINE FOOD AND DRINKS, ALL-IN-ONE PLACE FOR YOUR BEST TASTE.</h1>
                 <div class="separator mx-auto md:mx-0"></div>
                 <p class="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</p>
@@ -235,28 +243,510 @@
                 <h2 class="text-4xl text-center font-bold mb-4">OUR BEST MENU</h2>
                 <div class="separator mx-auto"></div>
                 <P class="text-center text-xs mb-5">lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, cumque.</P>
-            </div>
 
-            <div class="">
+                <div class="tabs-warp">
                 <ul class="flex flex-wrap items-center justify-center space-x-12 text-lg font-bold  ">
-                    <li class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">All</li>
-                    <li class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Food</li>
-                    <li class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Snack</li>
-                    <li class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Beverage</li>
+                    <li data-tabs="all" class="active py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">All</li>
+                    <li data-tabs="food" class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Food</li>
+                    <li data-tabs="snack" class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Snack</li>
+                    <li data-tabs="beverage" class="  py-2 px-7 rounded-lg  hover:bg-secondary transition duration-300">Beverage</li>
                 </ul>
             </div>
-            
+            </div>
 
-            <!-- <div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-            </div> -->
+
+            <div class="container mx-auto py-7 ">
+                <ul class=" mx-3 gap-5 grid md:grid-cols-2 lg:grid-cols-4 lg:gap-12 ">
+
+
+                    <!-- Burger Items -->
+                    <li class="items_warp food">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp food">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-2.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp food">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-3.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    
+                    <li class="items_warp food">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-4.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <!-- FRENCH FRIES -->
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-2.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-3.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-4.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-5.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp snack">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/snack-6.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">FRENCH FRIES</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <!-- SWEET SMOOTHIE -->
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/beverage-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">SWEET SMOOTHIE</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/beverage-2.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">SWEET SMOOTHIE</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/beverage-3.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">SWEET SMOOTHIE</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/beverage-4.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">SWEET SMOOTHIE</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/beverage-5.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">SWEET SMOOTHIE</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+
+
+                    <li class="items_warp beverage">
+                        <div class="bg-light h-56 grid place-items-center rounded-3xl lg:max-h-40"><img src="./src/img/burger-1.png" alt="Menu Item" class="w-40 md:w-48 lg:w-24" ></div>
+
+                        <div class="py-5">
+                            <h3 class="text-2xl font-bold ">REGULAR BURGER</h3>
+                            <P class="text-xs">lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                            <p class="text-secondary py-3 ">$12.99</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--------- Review --------------->
+
+    <section id="review"  class="bg-light">
+
+        <div class="container mx-auto ">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-center">CUSTOMER REVIEWS</h1>
+                <div class="separator mx-auto"></div>
+                <p class="text-xs py-4 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe sint accusantium exercitationem laboriosam, accusamus a, velit fuga voluptatibus et nesciunt Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex quos excepturi laboriosam perspiciatis quo ad rem voluptatum corporis commodi eligendi!</p>
+            </div>
+
+            <!-- Review customers -->
+            <div class="swiper py-10">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class=" flex flex-col rounded-lg p-6 mx-4 bg-primary"> 
+                    <div class="mx-3">
+                    <p class="text-xs py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nihil voluptatum temporibus, in iure modi fugiat assumenda facere numquam quis ab id excepturi. </p>
+
+                    <div class="flex gap-3 py-5 items-center">
+                        <img src="./src/img/review-2.jpg" alt="Customer Review" class="w-16 h-16 rounded-full ">
+                        <div>
+                            <h3 class="text-2xl font-bold ">John Doe</h3>
+                            <p class="text-xs">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    </li>
+
+
+                    <li class="swiper-slide">
+                        <div class=" flex flex-col rounded-lg p-6 mx-4 bg-primary"> 
+                    <div class="mx-3">
+                    <p class="text-xs py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nihil voluptatum temporibus, in iure modi fugiat assumenda facere numquam quis ab id excepturi. </p>
+
+                    <div class="flex gap-3 py-5 items-center">
+                        <img src="./src/img/review-3.jpg" alt="Customer Review" class="w-16 h-16 rounded-full ">
+                        <div>
+                            <h3 class="text-2xl font-bold ">John Doe</h3>
+                            <p class="text-xs">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    </li>
+
+
+                    <li class="swiper-slide">
+                        <div class=" flex flex-col rounded-lg p-6 mx-4 bg-primary"> 
+                    <div class="mx-3">
+                    <p class="text-xs py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nihil voluptatum temporibus, in iure modi fugiat assumenda facere numquam quis ab id excepturi. </p>
+
+                    <div class="flex gap-3 py-5 items-center">
+                        <img src="./src/img/review-1.jpg" alt="Customer Review" class="w-16 h-16 rounded-full ">
+                        <div>
+                            <h3 class="text-2xl font-bold ">John Doe</h3>
+                            <p class="text-xs">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    </li>
+
+
+                    <li class="swiper-slide">
+                        <div class=" flex flex-col rounded-lg p-6 mx-4 bg-primary"> 
+                    <div class="mx-3">
+                    <p class="text-xs py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nihil voluptatum temporibus, in iure modi fugiat assumenda facere numquam quis ab id excepturi. </p>
+
+                    <div class="flex gap-3 py-5 items-center">
+                        <img src="./src/img/review-4.jpg" alt="Customer Review" class="w-16 h-16 rounded-full ">
+                        <div>
+                            <h3 class="text-2xl font-bold ">John Doe</h3>
+                            <p class="text-xs">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    </li>
+
+
+                    <li class="swiper-slide">
+                        <div class=" flex flex-col rounded-lg p-6 mx-4 bg-primary"> 
+                    <div class="mx-3">
+                    <p class="text-xs py-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nihil voluptatum temporibus, in iure modi fugiat assumenda facere numquam quis ab id excepturi. </p>
+
+                    <div class="flex gap-3 py-5 items-center">
+                        <img src="./src/img/review-5.jpg" alt="Customer Review" class="w-16 h-16 rounded-full ">
+                        <div>
+                            <h3 class="text-2xl font-bold ">John Doe</h3>
+                            <p class="text-xs">Designer</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                    </li>
+                    
+
+                    
+                </ul>
+                <div class="swiper-pagination"></div>
+                
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!------------- Contact section ----------------->
+
+    <section id="contact">
+        <div class="flex flex-col md:flex-row items-center justify-around container mx-auto  bg-secondary py-10 gap-4 rounded-lg"> 
+            <div>
+            <h2 class="text-3xl font-bold text-black mx-4">GET EXCLUSIVE UPDATE</h2>
+            <P class="text-xs mx-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</P>
+            </div>
+            <div class="flex flex-col md:flex-row gap-3 flex-1">
+                    <input type="email" placeholder="Enter your email" class="py-3 px-5 rounded-lg md:w-full bg-white border-gray-300 text-black ">
+                    <button class="bg-black text-white py-3 px-7 rounded-lg hover:bg-transparent  hover:text-secondary transition duration-300 w-full md:w-auto">Subscribe</button>
+            </div>
         </div>
     </section>
 
     </main>
+
+
+    <footer>
+
+    <section id="contact">
+        <div class="flex flex-col gap-20  container mx-auto py-10 items-center justify-center md:justify-between  md:flex-row">
+
+
+            <div >
+                <h3 class="text-3xl font-bold">BUR<span class="text-3xl font-blod text-secondary">GER</span></h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                
+            </div>
+
+
+            <div class="leading-8">
+                <h4 class="text-2xl font-bold ">SUPPORT</h4>
+                <p>FAQ's</p>
+                <p>Praivacy Policy</p>
+                <p>Term & Conditions</p>
+                <p>Contact</p>
+            </div>
+
+
+
+            <div>
+                <div>
+                <h3>Phone</h3>
+                <p> <i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+            </div>
+            <div class="py-7">
+                <h3>Email</h3>
+                <p> <i class="fa-regular fa-envelope"></i> info@burger.com</p>
+            </div>
+        </div>
+
+
+
+            <div>
+                <div>
+                    <h2>Address</h2>
+                    <p> <i class="fa-solid fa-location-dot"></i> 123 Main Street, Anytown, USA</p>
+                </div>
+
+                <div class="py-8">
+                    <p>FOLLOW US</p>
+                    <div class="flex gap-3">
+                        <i class="fa-brands fa-facebook text-2xl"></i>
+                        <i class="fa-brands fa-twitter text-2xl"></i>
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <div class="container mx-auto py-5 text-center text-xs">
+        <div class="flex flex-col md:flex-row items-center justify-between ">
+        <p> efe</p>
+        <p>sdv</p>
+        </div>
+    </div>
+    </footer>
+
+    
+
+
+    <!-- swioer js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+
+              speed: 400,
+            spaceBetween: 30,
+            autoplay: {
+   delay: 3000,
+    disableOnInteraction: false,
+ },
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  
+  breakpoints: {
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      
+    },
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+    }
+  }
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+});
+    </script>
 
     <script src="./src/app.js"></script>
 </body>
